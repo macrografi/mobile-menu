@@ -3,6 +3,7 @@ var settings = {
   scripts: true,
   polyfills: true,
   styles: true,
+  svgs: true,
   copy: true,
   reload: true,
 };
@@ -17,6 +18,10 @@ var paths = {
   styles: {
     input: 'src/sass/**/*.{scss,sass}',
     output: 'dist/css/',
+  },
+  svgs: {
+    input: 'src/svg/*.svg',
+    output: 'dist/svg/',
   },
   copy: {
     input: 'src/copy/*',
@@ -60,8 +65,8 @@ var optimizejs = require('gulp-optimize-js');
 // Styles
 var sass = require('gulp-sass');
 var minify = require('gulp-cssnano');
-// Images
-var imagemin = require('gulp-imagemin');
+// SVGs
+var svgmin = require('gulp-svgmin');
 // BrowserSync
 var browserSync = require('browser-sync').create();
 // Remove pre-existing content from output folders
@@ -166,7 +171,17 @@ var buildStyles = function (done) {
   // Signal completion
   done();
 };
+// Optimize SVG files
+var buildSVGs = function (done) {
+  // Make sure this feature is activated before running
+  if (!settings.svgs) return done();
 
+  // Optimize SVG files
+  src(paths.svgs.input).pipe(svgmin()).pipe(dest(paths.svgs.output));
+
+  // Signal completion
+  done();
+};
 // Copy static files into output folder
 var copyFiles = function (done) {
   // Make sure this feature is activated before running
@@ -203,5 +218,5 @@ var watchSource = function (done) {
   watch(paths.input, series(exports.default, reloadBrowser));
   done();
 };
-exports.default = series(cleanDist, parallel(buildScripts, lintScripts, buildStyles, buildImages, copyFiles));
+exports.default = series(cleanDist, parallel(buildScripts, lintScripts, buildStyles, buildSVGs, copyFiles));
 exports.watch = series(exports.default, startServer, watchSource);

@@ -1,0 +1,134 @@
+.mobil-menu-collapse-holder {
+  position: relative;
+  .mobil-menu-collapse-container {
+    height: 52px;
+  }
+  #mobileCollapse {
+    position: absolute;
+    z-index: 2;
+  }
+}
+#Sidenav {
+  height: 100%;
+  display: none;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  transition: 0.5s;
+  .mobile-menu-head {
+    width: 100%;
+    height: 85px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background: rgba(255, 255, 255, 0.9);
+    .header-logo {
+      color: #fff;
+      margin-left: 20px;
+      width: 200px;
+      height: 45px;
+      background-size: contain;
+      a {
+        width: 156px;
+        height: 36px;
+        display: block;
+      }
+    }
+    @media screen and(min-width: 767px) and (max-width: 1500px) {
+      .header-logo {
+        background: none;
+      }
+    }
+    .close-container {
+      margin-right: 20px;
+      a {
+        display: block;
+        width: 28px;
+        height: 28px;
+        color: #424446;
+        transition: 0.5s;
+      }
+      :hover {
+        color: #5f9aff;
+        transition: 0.5s;
+        text-decoration: none;
+      }
+      :before {
+        content: '\2715';
+        font-size: 28px;
+        line-height: 27px;
+      }
+    }
+  }
+  .mobile-menu-content {
+    position: relative;
+    height: calc(100% - 85px);
+    padding-top: 85px;
+    background-color: #fff;
+    ul {
+      padding: 0;
+      li {
+        height: 80px;
+        color: #646f79;
+        border-bottom: 1px solid #e5e5e5;
+        list-style-type: none;
+        a {
+          font-size: 20px;
+          //font-weight: $font-500;
+          width: calc(100% - 20px);
+          height: 80px;
+          margin-left: 20px;
+          cursor: pointer;
+          color: #131313;
+        }
+        a:hover {
+          text-decoration: none;
+          transition: 0.5s;
+          color: #5f9aff;
+        }
+      }
+      .sub-content-text {
+        p {
+          font-size: 18px;
+        }
+        height: 130px;
+        a {
+          height: 130px;
+          width: calc(100% - 40px);
+          margin: 0 20px;
+        }
+      }
+    }
+    .open-sub-content {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 85px;
+      right: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      background-color: #fff;
+    }
+  }
+}
+#Sidenav.active {
+  display: block;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.35;
+  z-index: 9998;
+  display: none;
+  transition: 0.5s opacity;
+}
+.overlay.active {
+  transition: 0.5s opacity;
+  display: block;
+}
