@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13c23c2a-c539-44f2-b660-a1f41e7d89dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/mobile-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/mobile-menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/mobile-menu.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/mobile-menu.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="13c23c2a-c539-44f2-b660-a1f41e7d89dc" name="Default Changelist" comment="fix">
       <change beforePath="$PROJECT_DIR$/src/js/mobile-menu/mobile-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/mobile-menu/mobile-menu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +86,16 @@
       <option name="presentableId" value="Default" />
       <updated>1606723464483</updated>
       <workItem from="1606723465594" duration="4699000" />
+      <workItem from="1606736834707" duration="374000" />
     </task>
+    <task id="LOCAL-00001" summary="fix">
+      <created>1606736949254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606736949254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,14 +106,29 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1606725966069">
