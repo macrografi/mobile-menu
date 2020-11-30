@@ -21,30 +21,30 @@
 
   var defaults = {
     selector: '#Sidenav',
-    /*        effect: 'basic-zoom',
-        speed: '0.6s',
-        card: false,
-        overlay: false,*/
+    isAccordion: false,
+    isLayer: false,
     callback: function () {},
   };
 
   var createItem = function (items, settings) {
     for (var i = 0; i < items.length; i++) {
-      var mobileCollapse = document.querySelector('#mobileCollapse');
-      var overlay = document.querySelector('#overlay');
-      var sidenav = document.querySelector('#Sidenav');
-      var sideBarClose = document.querySelector('#sideBarClose');
-      var subContent = document.querySelectorAll('.open-sub-content');
-      var menuItem = document.querySelectorAll('#menuItem li');
-      var winWidth;
+      var mobileCollapse = document.querySelector('#mobileCollapse'),
+        overlay = document.querySelector('#overlay'),
+        sidenav = document.querySelector('#Sidenav'),
+        sideBarClose = document.querySelector('#sideBarClose'),
+        subContent = document.querySelectorAll('.open-sub-content'),
+        menuItem = document.querySelectorAll('#menuItem li'),
+        goBackButton = document.querySelector('.go-back'),
+        winWidth;
 
       mobileCollapse.addEventListener('click', openSideNav);
       overlay.addEventListener('click', closeNav);
       sideBarClose.addEventListener('click', closeNav);
+      //goBackButton.addEventListener('click', goBack);
+      window.addEventListener('resize', getWindowWidth);
 
       function openSideNav() {
         overlay.classList.toggle('active');
-
         function setWidth(val) {
           subContent.forEach((function (elm) {
             elm.setAttribute('style', 'display:block; width:' + val + 'px; right:-' + val + 'px;');
@@ -72,7 +72,14 @@
         subContent.forEach((function (elm, index) {
           elm.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
         }));
-        //winWidth = window.width();
+      }
+      function getBack(val) {
+        val.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
+      }
+      function goBack() {
+        //var subElem = this.offsetParent;
+        //console.log(subElem);
+        //getBack(subElem);
       }
       function getWindowWidth() {
         winWidth = window.innerWidth;
@@ -84,43 +91,6 @@
         }
       }
       getWindowWidth();
-      window.addEventListener('resize', getWindowWidth);
-      /*            var childCount = items[i].children.length;
-
-            if (childCount >= 2) {
-                items[i].children[1].style.transition = settings.speed;
-            } else {
-                items[i].children[0].style.transition = settings.speed;
-            }*/
-
-      /*            function getCard(elem, event) {
-                if (settings.card) {
-                    if (event === 'mouseover') {
-                        elem.children[0].classList.add('active');
-                    } else {
-                        elem.children[0].classList.remove('active');
-                    }
-                }
-            }*/
-      /*            function getOverlay(elem, event) {
-                if (settings.overlay) {
-                    if (event === 'mouseover') {
-                        elem.children[2].classList.add('active');
-                    } else {
-                        elem.children[2].classList.remove('active');
-                    }
-                }
-            }*/
-
-      /*            items[i].addEventListener('mouseover', function () {
-                this.classList.add(settings.effect);
-                getCard(this, 'mouseover');
-                getOverlay(this, 'mouseover');
-            });
-            items[i].addEventListener('mouseout', function () {
-                getCard(this, 'mouseout');
-                getOverlay(this, 'mouseout');
-            });*/
     }
     settings.callback(items);
   };

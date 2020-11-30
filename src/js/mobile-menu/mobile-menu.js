@@ -13,26 +13,30 @@
 
   var defaults = {
     selector: '#Sidenav',
+    isAccordion: false,
+    isLayer: false,
     callback: function () {},
   };
 
   var createItem = function (items, settings) {
     for (var i = 0; i < items.length; i++) {
-      var mobileCollapse = document.querySelector('#mobileCollapse');
-      var overlay = document.querySelector('#overlay');
-      var sidenav = document.querySelector('#Sidenav');
-      var sideBarClose = document.querySelector('#sideBarClose');
-      var subContent = document.querySelectorAll('.open-sub-content');
-      var menuItem = document.querySelectorAll('#menuItem li');
-      var winWidth;
+      var mobileCollapse = document.querySelector('#mobileCollapse'),
+        overlay = document.querySelector('#overlay'),
+        sidenav = document.querySelector('#Sidenav'),
+        sideBarClose = document.querySelector('#sideBarClose'),
+        subContent = document.querySelectorAll('.open-sub-content'),
+        menuItem = document.querySelectorAll('#menuItem li'),
+        goBackButton = document.querySelector('.go-back'),
+        winWidth;
 
       mobileCollapse.addEventListener('click', openSideNav);
       overlay.addEventListener('click', closeNav);
       sideBarClose.addEventListener('click', closeNav);
+      //goBackButton.addEventListener('click', goBack);
+      window.addEventListener('resize', getWindowWidth);
 
       function openSideNav() {
         overlay.classList.toggle('active');
-
         function setWidth(val) {
           subContent.forEach(function (elm) {
             elm.setAttribute('style', 'display:block; width:' + val + 'px; right:-' + val + 'px;');
@@ -60,7 +64,14 @@
         subContent.forEach(function (elm, index) {
           elm.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
         });
-        //winWidth = window.width();
+      }
+      function getBack(val) {
+        val.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
+      }
+      function goBack() {
+        //var subElem = this.offsetParent;
+        //console.log(subElem);
+        //getBack(subElem);
       }
       function getWindowWidth() {
         winWidth = window.innerWidth;
@@ -72,7 +83,6 @@
         }
       }
       getWindowWidth();
-      window.addEventListener('resize', getWindowWidth);
     }
     settings.callback(items);
   };
