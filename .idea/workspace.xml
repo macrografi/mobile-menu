@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13c23c2a-c539-44f2-b660-a1f41e7d89dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/mobile-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/mobile-menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/mobile-menu.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/mobile-menu.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/mobile-menu/mobile-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/mobile-menu/mobile-menu.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1l0A753FEjAjiNikoyxHU4M3Y73" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GK_Group20" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Dev\Js\mobile-menu\node_modules\prettier" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="watch" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>watch</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gulp.js.watch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13c23c2a-c539-44f2-b660-a1f41e7d89dc" name="Default Changelist" comment="" />
+      <created>1606723464483</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606723464483</updated>
+      <workItem from="1606723465594" duration="4699000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1606725966069">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="455" key="FileChooserDialogImpl/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606725966069" />
+    <state width="2539" height="394" key="GridCell.Tab.0.bottom" timestamp="1606735089398">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="394" key="GridCell.Tab.0.bottom/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606735089398" />
+    <state width="2539" height="394" key="GridCell.Tab.0.center" timestamp="1606735089398">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="394" key="GridCell.Tab.0.center/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606735089398" />
+    <state width="2539" height="394" key="GridCell.Tab.0.left" timestamp="1606735089398">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="394" key="GridCell.Tab.0.left/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606735089398" />
+    <state width="2539" height="394" key="GridCell.Tab.0.right" timestamp="1606735089398">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="394" key="GridCell.Tab.0.right/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606735089398" />
+  </component>
+</project>
