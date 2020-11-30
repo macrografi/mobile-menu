@@ -35,6 +35,7 @@
       var sidenav = document.querySelector('#Sidenav');
       var sideBarClose = document.querySelector('#sideBarClose');
       var subContent = document.querySelectorAll('.open-sub-content');
+      var menuItem = document.querySelectorAll('#menuItem li');
       var winWidth;
 
       mobileCollapse.addEventListener('click', openSideNav);
@@ -46,8 +47,13 @@
 
         function setWidth(val) {
           subContent.forEach((function (elm) {
-            console.log(elm);
             elm.setAttribute('style', 'display:block; width:' + val + 'px; right:-' + val + 'px;');
+          }));
+          menuItem.forEach((function (elm, index) {
+            elm.addEventListener('click', (function () {
+              var menuItem = document.querySelector('#sub-' + index);
+              menuItem.setAttribute('style', 'display:block; width:' + val + 'px; right:' + 0 + 'px;');
+            }));
           }));
         }
         if (winWidth >= 768 || winWidth === 1024) {
@@ -62,6 +68,10 @@
       function closeNav() {
         sidenav.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
         overlay.classList.toggle('active');
+
+        subContent.forEach((function (elm, index) {
+          elm.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
+        }));
         //winWidth = window.width();
       }
       function getWindowWidth() {
