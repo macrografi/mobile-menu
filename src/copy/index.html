@@ -142,11 +142,27 @@
         </div>
       </div>
     </div>
+    <div id="sidenavAcc" class="sidenav-acc">
+      <div class="mobile-menu-head d-flex justify-content-between align-items-center">
+        <div class="header-logo">
+          <a href="#">My Logo</a>
+        </div>
+        <div class="close-container">
+          <a href="javascript:void(0)" id="sideBarClose"></a>
+        </div>
+      </div>
+      <div class="mobile-menu-content">
+        fdg
+      </div>
+    </div>
+
     <div id="overlay" class="overlay"></div>
     <script src="js/mobile-menu.min.js"></script>
     <script>
       new getContents('#Sidenav', {
         isLayer: true,
+        isAccordion: false,
+        overlay: true,
       });
     </script>
   </body>
