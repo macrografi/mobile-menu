@@ -12,7 +12,7 @@
   'use strict';
 
   var defaults = {
-    selector: '#Sidenav',
+    selector: '.sidenav',
     overlay: false,
     isAccordion: false,
     isLayer: false,
@@ -25,19 +25,20 @@
       var sidenav = items[i],
         mobileCollapse = document.querySelector('#mobileCollapse'),
         overlay = document.querySelector('#overlay'),
-        sideBarClose = document.querySelector('#sideBarClose'),
+        sideBarClose = document.querySelectorAll('.sidebar-close'),
         subContent = document.querySelectorAll('.open-sub-content'),
         menuItem = document.querySelectorAll('#menuItem li'),
+        menuItemAcc = document.querySelectorAll('#menuItemAcc li'),
         goBackButton = document.querySelectorAll('.go-back'),
         winWidth;
-
       /*start set calculate window width*/
       function getWindowWidth() {
         winWidth = window.innerWidth;
         overlay.classList.remove('active');
         if (winWidth < 1230) {
           sidenav.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
-        } else {
+        }
+        else {
           sidenav.setAttribute('style', 'display:none');
         }
       }
@@ -53,54 +54,79 @@
       }
       /*end overlay*/
 
+      /*start set width*/
+      function setWidth(val) {
+        subContent.forEach(function(elm) {
+          elm.setAttribute('style', 'display:block; width:' + val + 'px; right:-' + val + 'px;');
+        });
+        menuItem.forEach(function(elm, index) {
+          elm.addEventListener('click', function() {
+            var menuItem = document.querySelector('#sub-' + index);
+            menuItem.setAttribute('style', 'display:block; width:' + val + 'px; right:' + 0 + 'px;');
+          });
+        });
+      }
+      /*end set width*/
+
+      /*start set attribute*/
+      function setAttr() {
+        sidenav.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:' + 0 + 'px;');
+      }
+      /*end set attribute*/
+
       /*start open sidenav*/
       function openSideNav() {
-        if (settings.isLayer) {
-          getOverlay();
-          function setWidth(val) {
-            subContent.forEach(function(elm) {
-              elm.setAttribute('style', 'display:block; width:' + val + 'px; right:-' + val + 'px;');
-            });
-            menuItem.forEach(function(elm, index) {
-              elm.addEventListener('click', function() {
-                var menuItem = document.querySelector('#sub-' + index);
-                menuItem.setAttribute('style', 'display:block; width:' + val + 'px; right:' + 0 + 'px;');
-              });
-            });
-          }
-          if (winWidth >= 768 || winWidth === 1024) {
-            winWidth = window.innerWidth / 2;
-            sidenav.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:' + 0 + 'px;');
-            setWidth(winWidth);
-          } else {
-            sidenav.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:' + 0 + 'px;');
-            setWidth(winWidth);
-          }
+        getOverlay();
 
-          goBackButton.forEach(function(elm, index) {
-            elm.addEventListener('click', goBack);
-          });
-          function getBack(val) {
-            val.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
+        /*start click go back sub layer*/
+        goBackButton.forEach(function(elm, index) {
+          elm.addEventListener('click', goBack);
+        });
+        /*end click go back sub layer*/
+
+        /*start click close sidebar*/
+        sideBarClose.forEach(function(elm, index) {
+          elm.addEventListener('click', closeNav);
+        });
+        /*end click close sidebar*/
+
+        if (winWidth >= 768 || winWidth === 1024) {
+          winWidth = window.innerWidth / 2;
+          setAttr();
+          if (settings.isLayer) {
+            setWidth(winWidth);
           }
-          function goBack() {
-            var subElem = this.offsetParent;
-            getBack(subElem);
+        } else {
+          setAttr();
+          if (settings.isLayer) {
+            setWidth(winWidth);
           }
-        } else if (settings.isAccordion) {
-          getOverlay();
-          console.log('accordion');
         }
       }
       /*end open sidenav*/
+
+      /*start get back*/
+      function getBack(val) {
+        val.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
+      }
+      /*start get back*/
+
+      /*start go back*/
+      function goBack() {
+        var subElem = this.offsetParent;
+        getBack(subElem);
+      }
+      /*start go back*/
 
       /*start close sidenav*/
       function closeNav() {
         sidenav.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
         getOverlay();
-        subContent.forEach(function(elm, index) {
-          elm.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
-        });
+        if (settings.isLayer) {
+          subContent.forEach(function(elm, index) {
+            elm.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
+          });
+        }
       }
       /*end close sidenav*/
 
@@ -116,27 +142,6 @@
       /*start click overlay*/
       overlay.addEventListener('click', closeNav);
       /*end click overlay*/
-
-      /*start click close sidebar*/
-      sideBarClose.addEventListener('click', closeNav);
-      /*end click close sidebar*/
-
-      /*
-      if (settings.isLayer) {
-        goBackButton.forEach(function(elm, index) {
-          elm.addEventListener('click', goBack);
-        });
-        function getBack(val) {
-          val.setAttribute('style', 'display:block; width:' + winWidth + 'px; right:-' + winWidth + 'px;');
-        }
-        function goBack() {
-          var subElem = this.offsetParent;
-          getBack(subElem);
-        }
-      } else if (settings.isAccordion) {
-        console.log('accordion');
-      }
-       */
     }
     settings.callback(items);
   };

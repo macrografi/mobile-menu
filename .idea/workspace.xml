@@ -26,8 +26,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13c23c2a-c539-44f2-b660-a1f41e7d89dc" name="Default Changelist" comment="add menu js">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/mobile-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/mobile-menu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/mobile-menu.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/mobile-menu.min.css" afterDir="false" />
@@ -36,8 +34,6 @@
       <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mobile-menu.polyfills.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/copy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/copy/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/mobile-menu/mobile-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/mobile-menu/mobile-menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/mobile-menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/mobile-menu.scss" afterDir="false" />
@@ -67,7 +63,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$USER_HOME$/GK_Group20" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -109,6 +105,8 @@
       <updated>1606723464483</updated>
       <workItem from="1606723465594" duration="4699000" />
       <workItem from="1606736834707" duration="6492000" />
+      <workItem from="1606989616914" duration="9712000" />
+      <workItem from="1607327031113" duration="2310000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1606736949254</created>
@@ -124,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606737221828</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add accordion">
+      <created>1606989498411</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606989498411</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +163,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix js" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix js" />
+    <MESSAGE value="add accordion" />
+    <option name="LAST_COMMIT_MESSAGE" value="add accordion" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2378" y="382" key="#Prettier" timestamp="1606903212645">
@@ -169,33 +175,46 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="455" key="FileChooserDialogImpl/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606744302995" />
-    <state width="1899" height="265" key="GridCell.Tab.0.bottom" timestamp="1606903766096">
-      <screen x="1680" y="23" width="1920" height="997" />
+    <state width="1899" height="131" key="GridCell.Tab.0.bottom" timestamp="1607327001147">
+      <screen x="1680" y="23" width="1920" height="1003" />
     </state>
     <state width="2539" height="394" key="GridCell.Tab.0.bottom/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606745560504" />
-    <state width="1899" height="265" key="GridCell.Tab.0.bottom/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1606903766096" />
-    <state width="1899" height="265" key="GridCell.Tab.0.center" timestamp="1606903766095">
-      <screen x="1680" y="23" width="1920" height="997" />
+    <state width="1899" height="265" key="GridCell.Tab.0.bottom/1680.23.1920.1001/0.23.1680.1027@1680.23.1920.1001" timestamp="1606989575622" />
+    <state width="1899" height="131" key="GridCell.Tab.0.bottom/1680.23.1920.1003/0.23.1680.1027@1680.23.1920.1003" timestamp="1607327001147" />
+    <state width="1899" height="131" key="GridCell.Tab.0.bottom/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1607002575569" />
+    <state width="1899" height="131" key="GridCell.Tab.0.center" timestamp="1607327001146">
+      <screen x="1680" y="23" width="1920" height="1003" />
     </state>
     <state width="2539" height="394" key="GridCell.Tab.0.center/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606745560504" />
-    <state width="1899" height="265" key="GridCell.Tab.0.center/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1606903766095" />
-    <state width="1899" height="265" key="GridCell.Tab.0.left" timestamp="1606903766095">
-      <screen x="1680" y="23" width="1920" height="997" />
+    <state width="1899" height="265" key="GridCell.Tab.0.center/1680.23.1920.1001/0.23.1680.1027@1680.23.1920.1001" timestamp="1606989575621" />
+    <state width="1899" height="131" key="GridCell.Tab.0.center/1680.23.1920.1003/0.23.1680.1027@1680.23.1920.1003" timestamp="1607327001146" />
+    <state width="1899" height="131" key="GridCell.Tab.0.center/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1607002575568" />
+    <state width="1899" height="131" key="GridCell.Tab.0.left" timestamp="1607327001146">
+      <screen x="1680" y="23" width="1920" height="1003" />
     </state>
     <state width="2539" height="394" key="GridCell.Tab.0.left/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606745560503" />
-    <state width="1899" height="265" key="GridCell.Tab.0.left/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1606903766095" />
-    <state width="1899" height="265" key="GridCell.Tab.0.right" timestamp="1606903766096">
-      <screen x="1680" y="23" width="1920" height="997" />
+    <state width="1899" height="265" key="GridCell.Tab.0.left/1680.23.1920.1001/0.23.1680.1027@1680.23.1920.1001" timestamp="1606989575620" />
+    <state width="1899" height="131" key="GridCell.Tab.0.left/1680.23.1920.1003/0.23.1680.1027@1680.23.1920.1003" timestamp="1607327001146" />
+    <state width="1899" height="131" key="GridCell.Tab.0.left/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1607002575567" />
+    <state width="1899" height="131" key="GridCell.Tab.0.right" timestamp="1607327001147">
+      <screen x="1680" y="23" width="1920" height="1003" />
     </state>
     <state width="2539" height="394" key="GridCell.Tab.0.right/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606745560504" />
-    <state width="1899" height="265" key="GridCell.Tab.0.right/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1606903766096" />
+    <state width="1899" height="265" key="GridCell.Tab.0.right/1680.23.1920.1001/0.23.1680.1027@1680.23.1920.1001" timestamp="1606989575622" />
+    <state width="1899" height="131" key="GridCell.Tab.0.right/1680.23.1920.1003/0.23.1680.1027@1680.23.1920.1003" timestamp="1607327001147" />
+    <state width="1899" height="131" key="GridCell.Tab.0.right/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1607002575569" />
     <state x="2392" y="147" key="RollbackChangesDialog" timestamp="1606902550591">
       <screen x="1680" y="23" width="1920" height="996" />
     </state>
     <state x="2392" y="147" key="RollbackChangesDialog/1680.23.1920.996/0.23.1680.1027@1680.23.1920.996" timestamp="1606902550591" />
-    <state x="872" y="429" key="Vcs.Push.Dialog.v2" timestamp="1606737232059">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="2334" y="330" key="Vcs.Push.Dialog.v2" timestamp="1606989506451">
+      <screen x="1680" y="23" width="1920" height="1001" />
     </state>
     <state x="872" y="429" key="Vcs.Push.Dialog.v2/-1920.254.1920.1160/2560.254.1920.1160/0.0.2560.1400@0.0.2560.1400" timestamp="1606737232059" />
+    <state x="2334" y="330" key="Vcs.Push.Dialog.v2/1680.23.1920.1001/0.23.1680.1027@1680.23.1920.1001" timestamp="1606989506451" />
+    <state width="600" height="440" key="javadoc.popup" timestamp="1606998301930">
+      <screen x="1680" y="23" width="1920" height="997" />
+    </state>
+    <state width="600" height="440" key="javadoc.popup/1680.23.1920.997/0.23.1680.1027@1680.23.1920.997" timestamp="1606998301930" />
   </component>
 </project>

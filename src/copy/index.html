@@ -25,7 +25,7 @@
           <a href="#">My Logo</a>
         </div>
         <div class="close-container">
-          <a href="javascript:void(0)" id="sideBarClose"></a>
+          <a href="javascript:void(0)" id="sideBarClose" class="sidebar-close"></a>
         </div>
       </div>
       <div class="mobile-menu-content">
@@ -148,20 +148,55 @@
           <a href="#">My Logo</a>
         </div>
         <div class="close-container">
-          <a href="javascript:void(0)" id="sideBarClose"></a>
+          <a href="javascript:void(0)" id="sideBarClose" class="sidebar-close"></a>
         </div>
       </div>
       <div class="mobile-menu-content">
-        fdg
+        <ul id="menuItemAcc">
+          <li>
+            <a class="d-flex align-items-center"
+              >About
+              <img class="ml-auto mr-5" src="svg/right_arrow.svg" />
+            </a>
+            <div class="acc-content">
+              CONTENT-1
+            </div>
+          </li>
+          <li>
+            <a class="d-flex align-items-center"
+              >Services
+              <img class="ml-auto mr-5" src="svg/right_arrow.svg" />
+            </a>
+            <div class="acc-content">CONTENT-2</div>
+          </li>
+          <li>
+            <a class="d-flex align-items-center"
+              >People & Organisation
+              <img class="ml-auto mr-5" src="svg/right_arrow.svg" />
+            </a>
+            <div class="acc-content">CONTENT-3</div>
+          </li>
+          <li>
+            <a href="#" class="d-flex align-items-center">Investor Relations</a>
+          </li>
+          <li>
+            <a href="#" class="d-flex align-items-center">Contact Us</a>
+          </li>
+        </ul>
       </div>
     </div>
 
     <div id="overlay" class="overlay"></div>
     <script src="js/mobile-menu.min.js"></script>
     <script>
-      new getContents('#Sidenav', {
+      /*      new getContents('.sidenav', {
         isLayer: true,
         isAccordion: false,
+        overlay: true,
+      });*/
+      new getContents('.sidenav-acc', {
+        isLayer: false,
+        isAccordion: true,
         overlay: true,
       });
     </script>
