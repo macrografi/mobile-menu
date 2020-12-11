@@ -71,14 +71,16 @@
     background-color: #fff;
     ul {
       padding: 0;
+      .active .acc-content {
+        opacity: 1;
+        height: 100px;
+      }
       li {
-        //height: 80px;
         color: #646f79;
         border-bottom: 1px solid #e5e5e5;
         list-style-type: none;
         a {
           font-size: 20px;
-          //font-weight: $font-500;
           width: calc(100% - 20px);
           height: 80px;
           margin-left: 20px;
@@ -90,13 +92,17 @@
           transition: 0.5s;
           color: #5f9aff;
         }
+
         .acc-content {
           font-size: 20px;
           width: calc(100%);
           padding-left: 20px;
           color: #131313;
-          background-color: orangered;
-          height: 100px;
+          background-color: rgba(193, 210, 236, 0.62);
+          transition: opacity 0.5s linear;
+          opacity: 0;
+          height: 0;
+          overflow: hidden;
         }
       }
       .sub-content-text {
@@ -131,14 +137,14 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 100vh;
   background: #000;
-  opacity: 0.35;
   z-index: 9998;
-  display: none;
-  transition: 0.5s opacity;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 .overlay.active {
-  transition: 0.5s opacity;
-  display: block;
+  opacity: 0.35;
+  height: 100vh;
 }
